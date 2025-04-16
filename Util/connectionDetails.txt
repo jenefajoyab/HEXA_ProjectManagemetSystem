@@ -1,0 +1,2 @@
+﻿﻿hostname=DESKTOP-II938IL
+dbname=ProjectManagement
