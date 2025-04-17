@@ -12,8 +12,6 @@ namespace ProjectManagement.DAO
 {
     public class ProjectRepositoryImpl
     {
-        public object Id { get; private set; }
-
         public bool CreateEmployee(Employee emp)
         {
             using (SqlConnection conn = DBConnUtil.GetConnection()) //create connection object
