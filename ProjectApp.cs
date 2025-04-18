@@ -27,13 +27,13 @@ namespace ProjectManagement
                 Console.WriteLine("8. View All Tasks for an Employee");
                 Console.WriteLine("9. Exit");
                 Console.Write("Enter your choice: ");
-                string choice = Console.ReadLine();
+                int choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 try
                 {
                     switch (choice)
                     {
-                        case "1":
+                        case 1:
                             Console.Write("Enter employee id: ");
                             int id = Convert.ToInt32(Console.ReadLine());
                             Console.Write("Enter name: ");
@@ -50,7 +50,7 @@ namespace ProjectManagement
                             repo.CreateEmployee(emp);
                             Console.WriteLine("Employee added.");
                             break;
-                        case "2":
+                        case 2:
                             Console.Write("Enter project id: ");
                             int projid = Convert.ToInt32(Console.ReadLine());
                             Console.Write("Enter project name: ");
@@ -65,7 +65,7 @@ namespace ProjectManagement
                             repo.CreateProject(project);
                             Console.WriteLine("Project created.");
                             break;
-                        case "3":
+                        case 3:
                             Console.Write("Enter task id: ");
                             int taskid = Convert.ToInt32(Console.ReadLine());
                             Console.Write("Enter task name: ");
@@ -80,7 +80,7 @@ namespace ProjectManagement
                             repo.CreateTask(task);
                             Console.WriteLine("Task created.");
                             break;
-                        case "4":
+                        case 4:
                             Console.Write("Enter project ID: ");
                             int pid = int.Parse(Console.ReadLine());
                             Console.Write("Enter employee ID: ");
@@ -88,7 +88,7 @@ namespace ProjectManagement
                             repo.AssignProjectToEmployee(pid, eid);
                             Console.WriteLine("Project assigned.");
                             break;
-                        case "5":
+                        case 5:
                             Console.Write("Enter task ID: ");
                             int tid = int.Parse(Console.ReadLine());
                             Console.Write("Enter project ID: ");
@@ -98,19 +98,19 @@ namespace ProjectManagement
                             repo.AssignTaskToEmployee(tid, projID, empID);
                             Console.WriteLine("Task assigned.");
                             break;
-                        case "6":
+                        case 6:
                             Console.Write("Enter employee ID to delete: ");
                             int delEmpId = int.Parse(Console.ReadLine());
                             repo.DeleteEmployee(delEmpId);
                             Console.WriteLine("Employee deleted.");
                             break;
-                        case "7":
+                        case 7:
                             Console.Write("Enter project ID to delete: ");
                             int delProjId = int.Parse(Console.ReadLine());
                             repo.DeleteProject(delProjId);
                             Console.WriteLine("Project deleted.");
                             break;
-                        case "8":
+                        case 8:
                             Console.Write("Enter employee ID: ");
                             int empId = int.Parse(Console.ReadLine());
                             Console.Write("Enter project ID: ");
